@@ -11,7 +11,19 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
+    <div id="rates"></div>
   </main>
 </body>
+
+<script>
+  (async function() {
+
+    let content = await fetch("api/RatesApi");
+    let message = content.status < 300 ? (await content.text()) : `Error=${content.status}, ${content.statusText}`;
+
+    document.querySelector("#rates").innerHTML = message;
+
+  })();
+</script>
 
 </html>
