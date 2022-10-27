@@ -11,7 +11,9 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-    <div id="rates"></div>
+    <div id="bitcoin"></div>
+    <div id="sek"></div>
+    <div id="converted"></div>
   </main>
 </body>
 
@@ -20,8 +22,8 @@
 
     let content = await fetch("api/RatesApi");
     let message = content.status < 300 ? (await content.text()) : `Error=${content.status}, ${content.statusText}`;
-
-    document.querySelector("#rates").innerHTML = message;
+    let test = JSON.parse(message);
+    document.querySelector("#bitcoin").innerHTML = test.bcRate;
 
   })();
 </script>

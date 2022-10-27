@@ -28,20 +28,22 @@ namespace Bitcoin.swa
             var latestRates = (await table.ExecuteQuerySegmentedAsync(query, null)).ToList();
             
             if (latestRates.Any()){
-                var result = new ApiResponse(latestRates.First().BitCoinRate, latestRates.First().SEKRate, latestRates.First().SEKperBC);
+                float bcfloat = (float)latestRates.First().BitCoinRate/100;
+                float sekfloat = (float)latestRates.First().SEKRate/10000;
+                var result = new ApiResponse(bcfloat, sekfloat, bcfloat * sekfloat);
                 return new OkObjectResult(result);
             }
             return new OkResult();
             
         }
     }
-        public record ApiResponse(string BCRate, string SEKRate, string SEKperBC);
+        public record ApiResponse(float BCRate, float SEKRate, float SEKperBC);
 
     public class TableData : TableEntity
     {
-        public string BitCoinRate {get; set;}
-        public string SEKRate {get; set;}
-        public string SEKperBC {get; set;}
+        public int BitCoinRate {get; set;}
+        public int SEKRate {get; set;}
+        
         
     }
 }
