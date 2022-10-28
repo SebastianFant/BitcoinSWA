@@ -10,10 +10,33 @@
 
 <body>
   <main>
-    <h1>Vanilla JavaScript App</h1>
-    <div id="bitcoin"></div>
-    <div id="sek"></div>
-    <div id="converted"></div>
+    <div id="container" class="row">
+      <div id="box">
+        <p id="flashlight">
+          <span id="flash">BitCoin</span>
+          <span id="light">Today</span>
+        </p>
+      </div>
+      <br/>
+      <div id="column" class="column">
+        <br/>
+        <h3>Bitcoin value in USD:</h3>
+        <br/>
+        <h1 class="center" id="bitcoin"></h1>
+      </div>
+      <div id="column" class="column">
+        <br/>
+        <h3>Current rate of Sek to USD:</h3>
+        <br/>
+        <h1 class="center" id="sek"></h1>        
+      </div>
+      <div id="column" class="column">
+        <br/>
+        <h3>BitCoin in Sek:</h3>
+        <br/>
+        <h1 class="center" id="converted"></h1>
+      </div>
+    </div>
   </main>
 </body>
 
@@ -23,7 +46,9 @@
     let content = await fetch("api/RatesApi");
     let message = content.status < 300 ? (await content.text()) : `Error=${content.status}, ${content.statusText}`;
     let test = JSON.parse(message);
-    document.querySelector("#bitcoin").innerHTML = test.bcRate;
+    document.querySelector("#bitcoin").innerHTML = test.bcRate + "$";
+    document.querySelector("#sek").innerHTML = test.sekRate+" Sek";
+    document.querySelector("#converted").innerHTML = "" + test.seKperBC + " Sek";
 
   })();
 </script>

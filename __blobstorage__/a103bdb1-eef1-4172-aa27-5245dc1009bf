@@ -1,0 +1,43 @@
+{
+  "masterKey": {
+    "name": "master",
+    "value": "qSmJWZEok7-jPzK5YoLLjI9tmEaaC9bTASYEGSASHIfTAzFuhxz5fw==",
+    "encrypted": false
+  },
+  "functionKeys": [
+    {
+      "name": "default",
+      "value": "TdS3jB9KOrpm7q8YV42vx8nK5ko-zo5THTg9o9fcMC2AAzFuJMTvCw==",
+      "encrypted": false
+    }
+  ],
+  "systemKeys": [],
+  "hostName": "localhost:7071",
+  "instanceId": "000000000000000000000000499FAE4E",
+  "source": "runtime",
+  "decryptionKeyId": ""
+}{
+  "masterKey": {
+    "name": "master",
+    "value": "qSmJWZEok7-jPzK5YoLLjI9tmEaaC9bTASYEGSASHIfTAzFuhxz5fw==",
+    "encrypted": false
+  },
+  "functionKeys": [
+    {
+      "name": "default",
+      "value": "TdS3jB9KOrpm7q8YV42vx8nK5ko-zo5THTg9o9fcMC2AAzFuJMTvCw==",
+      "encrypted": false
+    }
+  ],
+  "systemKeys": [
+    {
+      "name": "durabletask_extension",
+      "value": "pzdsv-A9Ou5v8K0vhgzfBmPretM8T_pke6uucBbgbO9YAzFuA0lv4A==",
+      "encrypted": false
+    }
+  ],
+  "hostName": "localhost:7071",
+  "instanceId": "000000000000000000000000499FAE4E",
+  "source": "runtime",
+  "decryptionKeyId": ""
+}{}{"Last":"0001-01-01T00:00:00","Next":"2022-10-27T14:06:00+02:00","LastUpdated":"2022-10-27T14:05:27.155916+02:00"}{"TaskHubName":"TestHubName","CreatedAt":"2022-10-27T12:05:27.1327506Z","PartitionCount":4}{"PartitionId":"testhubname-control-01","Owner":null,"Token":null,"Epoch":0}{"OwnerId":"811c9dc5-0000-0000-0000-000000000000","DesiredSwapId":null}{"PartitionId":"testhubname-control-00","Owner":"ACERPREDATOR-CA","Token":"09845127-5370-4723-850f-6e6c0ce3cbb5","Epoch":1}{"PartitionId":"testhubname-control-01","Owner":"ACERPREDATOR-CA","Token":"c5b45de9-c3b0-4539-91d0-d4a4e0970616","Epoch":1}{"PartitionId":"testhubname-control-02","Owner":"ACERPREDATOR-CA","Token":"da19e74e-2fe5-495b-9911-20d09fd3763a","Epoch":1}{"PartitionId":"testhubname-control-03","Owner":"ACERPREDATOR-CA","Token":"c9593afe-706e-4831-b622-e2c5f79863c2","Epoch":1}{"PartitionId":"testhubname-control-00","Owner":"ACERPREDATOR-CA","Token":"738d100e-6a56-4f4c-abc6-9aaab5f0c955","Epoch":1}{"PartitionId":"testhubname-control-01","Owner":"ACERPREDATOR-CA","Token":"2f125441-a5d7-4d5c-8434-2ebcaffc0a6d","Epoch":1}{"PartitionId":"testhubname-control-02","Owner":"ACERPREDATOR-CA","Token":"17d3db9c-48e0-421d-81c0-7c3f99860375","Epoch":1}{"PartitionId":"testhubname-control-03","Owner":"ACERPREDATOR-CA","Token":"b7d64f56-5c11-4930-885e-991a6276b60a","Epoch":1}{"Last":"2022-10-27T14:06:00.0032703+02:00","Next":"2022-10-27T14:07:00+02:00","LastUpdated":"2022-10-27T14:06:00.0032703+02:00"}
