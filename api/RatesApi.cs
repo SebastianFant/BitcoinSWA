@@ -1,15 +1,13 @@
-using System;
-using System.IO;
+
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using Microsoft.Azure.Cosmos.Table;
 using System.Linq;
-using Microsoft.Azure.Cosmos.Table.Queryable;
+
 namespace Bitcoin.swa
 {
     public static class RatesApi
@@ -22,8 +20,6 @@ namespace Bitcoin.swa
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             var query = table.CreateQuery<TableData>();
-            
-            
 
             var latestRates = (await table.ExecuteQuerySegmentedAsync(query, null)).ToList();
             
@@ -34,7 +30,6 @@ namespace Bitcoin.swa
                 return new OkObjectResult(result);
             }
             return new OkResult();
-            
         }
     }
         public record ApiResponse(float BCRate, float SEKRate, float SEKperBC);
@@ -43,7 +38,5 @@ namespace Bitcoin.swa
     {
         public int BitCoinRate {get; set;}
         public int SEKRate {get; set;}
-        
-        
     }
 }

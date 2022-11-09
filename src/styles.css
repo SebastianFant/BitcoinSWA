@@ -22,7 +22,6 @@ p {
     margin: 0;
 }
 
-
 /* box ------------------------------------------------------ */
 
 #box {
@@ -34,7 +33,6 @@ p {
   -webkit-backface-visibility: hidden; /* fixes flashing */
 }
 
-
 /* flashlight ------------------------------------------------------ */
 
 #flashlight {
@@ -42,7 +40,6 @@ p {
   perspective: 80px;
   outline: none;
 }
-
 
 /* flash ------------------------------------------------------ */
 
@@ -56,7 +53,6 @@ p {
   margin-left: 20px;
   transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
 }
-
 
 /* light ------------------------------------------------------ */
 
